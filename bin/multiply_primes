@@ -4,8 +4,20 @@ require 'slop'
 require File.dirname(__FILE__) + '/../lib/uniteus.rb'
 
 opts = Slop.parse do |o|
+  o.banner = "usage: multiply_primes [options] [NUM_OF_PRIMES]"
   o.on '--version', 'print the version' do
     puts Uniteus::VERSION
     exit
   end
 end
+
+n = opts.arguments.first
+
+if n.nil?
+  puts "multiply_primes: missing number of primes to show the multiplication " +
+       "table for."
+  puts opts
+  exit
+end
+
+print Uniteus::DisplayPrime.multiplication_table_for_first(n)

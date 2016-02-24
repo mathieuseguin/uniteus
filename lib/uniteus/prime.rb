@@ -1,9 +1,11 @@
 module Uniteus
   class Prime
     class << self
+      ##
+      # Returns the first n primes
       def first(i = 1)
         i = i.to_i
-        
+
         # Estimate the size of the nth primes
         case
           when i < 0
