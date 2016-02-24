@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'slop'
+require File.dirname(__FILE__) + '/../lib/uniteus.rb'
+
+opts = Slop.parse do |o|
+  o.on '--version', 'print the version' do
+    puts Uniteus::VERSION
+    exit
+  end
+end
