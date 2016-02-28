@@ -37,3 +37,7 @@ $ ./bin/multiply_primes 3
 ---------------------------------
 ```
 
+# Complexity
+
+This application implements the Sieves of Eratosthenes which has a complexity of O(n log log n) so it is theoretically possible to scale to very large numbers. The limitation will be its memory requirement. This algorithm is memory intensive and will scale up to the point where it uses all the memory available.
+
